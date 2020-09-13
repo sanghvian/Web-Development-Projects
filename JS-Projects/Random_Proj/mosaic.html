@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaic</title>
+</head>
+<body>
+    <div class="container"></div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .box{
+            position: relative;
+            height: 29.7px;
+            width:30px;
+            border: 1px  solid #000;
+            background: #000;
+        }
+
+        .box::before{
+            content: '';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background : #fff;
+            opacity: 0.2;            
+        }
+
+    </style>
+
+    <script>
+        container = document.querySelector('.container');
+
+        for(let i=0;i<=1500;i++){
+            const colorBox = document.createElement('div');
+            colorBox.classList.add('box');
+            container.appendChild(colorBox);
+        }
+
+        function randomColors(){
+            const hex = "0123456789ABCDEF";
+            const hexLen = 6;
+            let hexCode ='#';
+
+            for(let j= 0;j<hexLen;j++){
+                let randClr = Math.floor(Math.random()*hex.length);;
+                hexCode+= hex.substring(randClr,randClr+1);
+            }
+
+            return hexCode;
+        }
+
+        const allClrBox = document.querySelectorAll('.box');
+
+        function addColor(){
+            allClrBox.forEach((e)=>{
+                e.style.background = randomColors();
+            });
+        }
+
+        addColor();
+
+    </script>
+
+
+</body>
+</html>

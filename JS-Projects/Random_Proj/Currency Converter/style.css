@@ -1,0 +1,125 @@
+:root{
+    --primary-color:#5fbaa7;
+    --bg-color:rgb(255, 251, 241);
+}
+
+@font-face{
+    font-family: 'Google';
+    src:url('./Google.ttf');
+}
+@font-face{
+    font-family: 'GoogleBold';
+    src:url('./Google\ Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-height: 100vh;
+    margin:2rem 2rem 1rem 2rem;
+    display: flex;
+    font-family: 'Google';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:var(--bg-color) ;
+}
+
+.money-img{
+    height: 30vh;
+    animation: wheel 1.5s ease forwards;
+}
+
+h1{
+    font-family: 'GoogleBold';
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+p{
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.currency{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow-y:scroll;
+    max-height: 35vh; */
+}
+
+#currency-one,#currency-two,.btn,#amount-one,#amount-two{
+    border:none;
+    outline:none;  
+}
+
+#currency-one,#currency-two{
+    height: 3rem;
+    font-size: 1.5rem;
+    border: 3px solid var(--primary-color);
+    border-radius: 0.4rem;
+    background: var(--bg-color);
+    color: var(--primary-color);
+}
+
+#amount-one,#amount-two{
+    text-align: right;
+    width: 40%;
+    height: 3rem;
+    background: transparent;
+    font-size: 1.5rem;
+}
+
+.swap-rate-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    background: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    border-radius: 0.6rem;
+    margin:1rem 1rem 1rem 0;
+    cursor:pointer;
+    padding:0.2rem 0.5rem;
+}
+
+.btn i{
+    transform: rotateZ(90deg);
+    margin: 0.5rem;
+}
+
+
+#rate{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: transparent;
+    text-align: right;
+}
+
+@keyframes wheel{
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@media all and (max-width:900px){
+    h1{
+        font-size:1.5rem;
+    }
+    p{
+        font-size: 0.75rem;
+    }
+}
+
+
+

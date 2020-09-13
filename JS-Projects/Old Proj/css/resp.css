@@ -1,0 +1,155 @@
+
+body{
+	margin: 1%;
+	padding:1%;
+	background-color: rgba(0,0,255,.2);
+	font-size: 100%;
+	min-width: 500px;
+
+}
+header, footer{
+  /*background-color:#0066FF;*/
+  padding: 1%;
+  margin: 1%;
+}
+header h1{
+	font-size: 3rem;
+	color:rgba(0,0,0,.7);
+
+}
+
+section{
+    margin:1%;
+    padding:1%;
+}
+
+.nav-item, .nav-item-dropdown{
+	background-color: #99A6FF ;
+	border: 12px 8px dotted #000000;
+ 	color:#FFFFFF;
+ 	line-height:13px;
+	border-radius: 55px;
+	text-decoration:none;
+	padding: 1%;
+	margin: 3%;
+  	width:25%;
+}
+
+h1{
+	text-align: center;
+}
+
+
+.col-md-8{
+  background-colour:#99C8FF;
+  font-family:"Arial", "Helvetica";
+  border: dotted #000000 3px 6px 9px 12px;
+  border-radius : 6px;
+  font-size:150%;
+  margin : 0 auto;
+  font-style:italic;
+}
+
+.col-lg-10{
+  background-colour:#FFFFFF;
+  font-family:"Times New Roman", "Verdana";
+  font-size:150%;
+  font-weight:bold;
+  font-style:normal;
+}
+
+.myClass{
+	margin: 0em 1em;
+	padding:.75em;
+	border: 1px solid black;
+	border-radius: .25%;
+
+	/* Safari and Chrome */	
+	-webkit-column-count:3;
+	-moz-column-count: 3;
+	column-count:3;
+	
+}
+
+
+
+ol{
+	list-style:upper-roman; 
+	margin:1em;
+}
+img{
+	display: normal;
+	height :20%;
+	width:auto;
+}
+
+footer{
+	clear: both;
+	text-align:center;
+	text-transform: uppercase;
+}
+
+/*@media screen and (min-width:900px){
+  
+  h1::after{
+	content: "(I guess...)";
+	font-size: 3rem;
+ 	color:rgba(0,0,0,.7);    
+ 	}
+
+   img{
+   	display:inline-block;
+   	width:25%;
+   	height:200px;
+   	margin : 10px;
+   }
+
+   header,footer{
+   	background-color:transparent;
+   }
+
+	#left{
+ 		display: inline-block;
+		float:left;
+  		width:30%;
+  		/*margin:5%;
+  }
+	#center{
+  		display:inline-block;
+  		width:60%;
+  		float:left;
+  }
+   
+  div{
+  	display:block;
+  }
+}
+ 
+@media print{
+	body{
+		background-color:unset;
+	}
+
+	img{
+		display: none;
+	}
+
+	header,footer{
+		background-color: unset;
+	}
+
+	header h1{
+		font-size: 1em;
+
+	}
+
+	nav a{
+	display:block;
+	background-color: white;
+	border: none;
+	text-align: center;
+	padding: unset;
+	margin: unset;
+	}
+}
+

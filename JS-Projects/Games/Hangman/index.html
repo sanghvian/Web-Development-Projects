@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangboi !</title>
+    <link rel="icon" href="./head.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="heading">HANGBOI</h1>
+    <h4 class="intro" data-text='Guess the word or this dude dies'>Guess the word or this dude dies</h4>
+    <div class="game-container">
+        <div class="upper-part">
+            <svg height='250' width='200' class="figure-container">
+                <line x1='60' y1='20' x2='140' y2='20' />
+                <line x1='140' y1='20' x2='140' y2='40' />
+                <line x1='60' y1='20' x2='60' y2='230' />
+                <line x1='20' y1='230' x2='100' y2='230' />
+
+                <circle class='figure-part' cx='140' cy='65' r='25'/>
+                <!-- <text x=125 y=65>JAY</text> -->
+                <line class='figure-part' x1='140' y1='90' x2='140' y2='170'/>
+                <line class='figure-part' x1='140' y1='105' x2='120' y2='145'/>
+                <line class='figure-part' x1='140' y1='105' x2='160' y2='145'/>
+                <line class='figure-part' x1='140' y1='170' x2='120' y2='220'/>
+                <line class='figure-part' x1='140' y1='170' x2='160' y2='220'/>
+
+            </svg>
+            <div class="wrong-words-container">
+                <div class="wrong-words"></div>
+            </div>
+        </div>
+        <div class="word-container">
+            <div class="word"></div>
+        </div>
+
+        
+    </div>
+    <div class="popup-container">
+        <div class="popup">
+            <h2 id='final-msg'></h2>
+            <button id='play-again'>Play Again 🤘🏻</button>
+        </div>
+    </div>
+
+    <div class="notification-container">
+        <h3>You have already entered this word before</h3>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

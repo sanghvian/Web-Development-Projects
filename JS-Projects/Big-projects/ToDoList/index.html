@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckList</title>
+    <link rel="icon" href="./todo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <h1>ToDo List</h1>
+    </header>            
+
+    <section>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+        <form action="">
+            <input type="text" class="todo"/>
+            <button class="todo-button" type="submit">
+                <i class="fas fa-plus-square"></i>
+            </button>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+                <!-- BASIC STRUCTURE:
+                <ul class="todo-list">
+                    <div class="todo">
+                        <li class="todo-item"></li>
+                        <button class="checkBtn"></button>
+                        <button class="trashBtn"></button>
+                    </div>
+                    <div class="todo">
+                        <li class="todo-item"></li>
+                        <button class="checkBtn"></button>
+                        <button class="trashBtn"></button>
+                    </div>
+                    <div class="todo">
+                        <li class="todo-item"></li>
+                        <button class="checkBtn"></button>
+                        <button class="trashBtn"></button>
+                    </div>  
+                </ul>           -->
+        </div>      
+        
+    </section>
+
+    <div class="ftr">
+        <p>Developed by Ankit</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

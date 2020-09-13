@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./green-check-mark-checkbox-turquoise-aqua-arrow-teal-circle-logo-png-clip-art.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action=""id='form' class='form'>
+        <h1 class="register">Register with Us</h1>
+        <div class="form-control">
+            <label for="username" class="user">Username</label>
+            <input type="text" name='user' id='username' placeholder='Enter a username'>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="emailID" class="emaildID">Email</label>
+            <input type="text" name='email' id='emailID' placeholder='Enter an email ID'>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password" class="passwordEnterID">Password</label>
+            <input type="password" name='passwordEnter' id='password'
+            placeholder='Enter a password'>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="passwordMatch" class="passwordConfirmID">Confirm Password</label>
+            <input type="password" name='passwordConfirm' id='passwordMatch' placeholder='Re-type password for confirmation'>
+            <small>Error message</small>
+        </div>
+        <button class="submit" type='submit'>Submit</button>
+    </form>
+
+    <script src='app.js'></script>
+</body>
+</html>

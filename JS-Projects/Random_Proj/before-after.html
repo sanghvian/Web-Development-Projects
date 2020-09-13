@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Before-After</title>
+</head>
+<body>
+  <div class="effect1"><h1>Effect 1</h1>
+    <h2>Stay Hungry. Stay Foolish.</h2>
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendus</blockquote>
+    <br><br>
+    <p>Lorem ipsum <a href="https://codepip.com/games/grid-garden/" data-tool-tip="Play this shitty game">dolor sit </a>, consectetur adipisicing elit. A aspernatur magni, nobis suscipit ipsa amet, aut dicta cum dolorum rerum quas. Nemo officiis deleniti, aut nihil unde aperiam quis error.</p>
+  </div>
+
+  <div class="effect2"><h1>Effect 2</h1>
+    <ul>
+      <li class="list-item"><h3>Topic Number 1</h3>
+        <p class="list-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendusLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendus</p>
+      </li>
+      <li class="list-item"><h3>Topic Number 2</h3>
+        <p class="list-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendusLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendus</p>
+      </li>
+      <li class="list-item"><h3>Topic Number 3</h3>
+        <p class="list-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendusLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendus</p>
+      </li>
+      <li class="list-item"><h3>Topic Number 4</h3>
+        <p class="list-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendusLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendus</p>
+      </li>
+      <li class="list-item"><h3>Topic Number 5</h3>
+        <p class="list-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendusLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum recusandae quidem repellendus</p>
+        <ol class="shitList">
+          <li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, delectus.</li>
+          <li class="item">Quod amet similique, libero corporis alias vero blanditiis perspiciatis totam.</li>
+          <li class="item">Sapiente fugit sit, facere ad repudiandae, unde sunt molestiae possimus!</li>
+          <li class="item">Non, rem, magnam? Sequi doloremque necessitatibus, unde perferendis, non deserunt!</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+
+  <div class="effect3"><h1>Effect 3</h1>
+  
+    <h1 class="intro">Here is a generic heading</h1>  ​
+    ​
+    <div class="container">
+    <div class="card">
+      <img src="../../images/Background7.jpg" alt="FSG" class="card__img">
+      <div class="card__text">
+        <h3 class="card__title">Formula Student</h3>
+        <p class="card__body">300 mids. 50 engines. 1 podium</p>
+      </div>
+        
+      </div>
+    <div class="card">
+      <img src="../../images/paper.jpg" alt="Paper" class="card__img">
+      <div class="card__text">
+        <h3 class="card__title">Newspaper</h3>
+        <p class="card__body">No news is good news</p>
+      </div>
+      </div>
+    </div>
+      ​
+      <p class="source">Hover effect inspired by <a href="https://tympanus.net/Development/HoverEffectIdeas/">this codrops article</a></p>
+
+  </div>
+
+</body>
+</html>
+
+<style type="text/css">
+  
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+*, *::before, *::after { box-sizing: border-box }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  background: #dddddd;
+}
+
+*,*::before.*::after{
+
+}
+
+div{
+  width: 97%;
+  justify-content: center;
+  text-align: center;
+}
+
+h1,h2{
+  text-transform: uppercase;
+}
+
+h1,h2,li,p{
+  text-align: center;
+  line-height: 2em;
+}
+
+blockquote{
+  /* width: 100%; */
+  /* font-size: 1.5em; */
+  font-weight: bold;
+  text-align: center;
+}
+
+blockquote::before{
+  content: open-quote;
+  font-size: 2em;
+  color: #000;
+}
+
+blockquote::after{
+  content: close-quote;
+  font-size: 2em;
+  color: #000;
+}
+
+a[data-tool-tip]{
+  position: relative;
+}
+
+a[data-tool-tip]::after{
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: #2f2f2f;
+  color: #fff;
+  border-radius:5px;
+  font-size:0.8em;
+  bottom:0;
+  left:0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out 150ms, bottom ease-out 150ms;
+}
+
+a[data-tool-tip]:hover ::after{
+  transform: scale(1);
+  bottom: 100%;
+}
+
+h1{
+  padding-top: 5em;
+}
+
+.list-item::before{
+  content: ',';
+  background: url("../../images/bolt.png") no-repeat 50% 50%;
+  display: block;
+}
+
+ul{
+  counter-reset: ankit-para-counter;
+}
+
+.list-para{
+  position: relative;
+  left:1.2em;
+}
+
+.list-para::before{
+  counter-increment: ankit-para-counter;
+  content: counter(ankit-para-counter) ') ';
+  position: absolute;
+  top: -0.3em;
+  left:-0.8em;
+  background: #2f2f2f;
+  color: #fff;
+  width: 2em;
+  height: 2em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.shitList{
+  counter-reset: ankit-list-counter;
+}
+
+.shitList li::before{
+   counter-increment: ankit-list-counter;
+   content:'list item' counter(ankit-list-counter)  ') ';
+   color:red;
+}
+
+.heading{
+  position: relative;
+  display: inline-block;
+  z-index: 3;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.heading::before, .heading::after{
+  position: absolute;
+  content: 'RAFTAR FORMULA RACING';
+  height: 100%;
+  color: #000;
+  font-weight: bold;
+  display: block;
+}
+
+.heading::before{
+  background:#ddd;
+  width: 100%;
+  z-index: 2;
+}
+
+.heading::after{
+  background : #2ff000;
+  width: 100vw;
+  left: 50%;
+  top: 0;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.card-bag{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow:row wrap;
+}
+
+.card{
+  position: relative;
+  display: block;
+  width: 300px;
+  background: #ddd;
+  margin: 30px;
+}
+
+.card img{
+  max-width: 100%;
+  display: block;
+}
+
+.card-text{
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  /* transform: translate(-50%,-50%); */
+  color: #fff;
+  opacity:0;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover .card-text{
+  opacity: 1;
+}
+
+
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family:'Unica One';
+  line-height: 1.4;
+  color:#ddd;
+}
+
+.effect3 h1, h2, h3, h4, h5 {
+  font-family: 'Unica One';
+  text-transform: uppercase;
+  line-height: .9;
+  color: #c31;
+}
+
+.intro { 
+  position: relative;
+  display: inline-block;
+}
+
+.effect3 h1::before,
+.effect3 h1::after {
+  content: '';
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.effect3 h1::before {
+  background:#c31;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+
+.effect3 h1::after {
+  height: 101%;
+  background: #fff;
+  left: -.1em;
+  right: -.1em;
+  z-index: -1;
+}
+
+.effect3 h2 {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+
+.effect3 p {
+  margin-top: .25em;
+}
+
+.effect3 a {
+  color:#c31;
+}
+
+.intro {
+  font-size: 4rem;
+}
+
+.effect3 blockquote {
+  font-size: 2rem;
+  color:#000;
+
+}
+
+  
+.effect3 blockquote ::before {
+    content: open-quote;
+  }
+  
+.effect3 blockquote ::after {
+    content: close-quote;
+  }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+
+.card {
+  position: relative;
+  margin: 1em;
+  background: #ddd;
+  height: 400px;
+  width: 400px;
+}
+
+.card img{
+  height: 400px;
+  width: 400px;
+}
+
+  
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    opacity: 1;
+    transition: transform ease-out 650ms;
+  }
+  
+.card::before {
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    transform: scale(0,1);
+  }
+  
+.card::after {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: scale(1,0);
+  }
+  
+.card:hover::before {
+    transform: scale(1.05, 1);
+  }
+  
+.card:hover::after {
+    transform: scale(1, 1.05);
+}
+
+
+.card__img {
+  max-width: 100%;
+  display: block;
+  transition: opacity ease-out 650ms;
+
+}
+
+.card:hover .card__img {
+    opacity: .2;
+}
+
+.card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  opacity: 0;
+  transition: opacity ease-out 650ms;
+}
+
+.card:hover .card__text {
+  opacity: 1;
+}
+
+.card__title {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.source {
+  opacity: .8;
+  width: 100%;
+  bottom: 0;
+}
+
+.effect1, .effect2{
+  color: #000;
+  z-index:100;
+}
+</style>
+

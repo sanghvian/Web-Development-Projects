@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #212121;
+    font-family: sans-serif;
+}
+
+h1{
+    width: 100%;
+    font-size: 2rem;
+    color: #fcfcfc;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sort-drag-container{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    background: #212121;
+    width: 100%;
+    height: 50vh;
+    grid-gap: 1rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding:1rem;
+    border:0.5rem solid gray;
+}
+
+.draggable{
+    height: 300px;
+    width: 200px;
+    margin:0 0.3rem;
+    background: #fcfcfc;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: dashed lightgray 0.2rem;
+}
+
+.draggable:hover{
+    cursor:grab;
+    /* height: inherit;
+    width: inherit; */
+}
+
+.draggable.dragging{
+    opacity:0.5;
+    cursor:grabbing;
+}
+
+.simple-drag-container{
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    height: 40vh;
+}
+
+.empty{
+    margin: 0.5rem;
+    border:gray solid 3px;
+    height: 100%;
+    width: 30%;
+    background: #eee;
+}
+
+.fill{
+    height: 93%;
+    width: 93%;
+    background: url('http://unsplash.it/822');
+    object-fit: cover;
+    margin: 0.5rem;
+    cursor:pointer;
+}
+
+.hovered{
+    background: #ccc;
+    border:dashed #aaa 3px
+}
+
+.hold{
+    border: 3px solid #bbb
+}
+
+.invisible{
+    display: none;
+}

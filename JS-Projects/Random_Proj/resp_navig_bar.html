@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Responsive Sticky Navbar</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script type="text/javascript">
+                  $(document).ready(function(){
+                        $('.toggle').click(function(){
+                              $('.toggle').toggleClass('active')
+
+                        })
+                  })
+            </script>
+</head>
+<body>
+      <div class="wrapper">
+            <header>
+
+                  <nav>
+
+                        <article class="menu-icon">
+
+                              <div class="toggle">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              </div>    
+                        </article> 
+                                    
+                              <div class="logo1">
+                                  <img src="../../images/logo.png">
+                              </div>
+                              <div class="logo2">
+                                  <img src="../../images/Raftar Name1.png">
+                              </div>
+
+                        
+
+                        <div class="menu">
+                              <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li class="active"><a href="index.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Home
+                                      </a></li>
+                                  <li><a href="media.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Media
+                                  </a></li>
+                                  <li><a href="heritage.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Team
+                                  </a></li>
+                                  <li><a href="cars.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Cars
+                                  </a></li>
+                                  <li><a href="blog.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Blog
+                                  </a></li>
+                                  <li><a href="spons.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Sponsors
+                                  </a></li>
+                                  <li><a href="fs.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Competition
+                                  </a></li>
+                                  <li><a href="contact.html">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                      Contact
+                                  </a></li>
+                                    <!--<li><a href="#"></a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact</a></li>-->
+                              </ul>
+                        </div>
+                  </nav>
+
+            </header>
+      </div>
+
+            <div class="content">
+                  <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+      
+      </script>
+
+</body>
+</html>
+
+
+<style>
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 36px;
+      height: 400p;
+      margin-top: 0;
+      top: 0;
+}
+
+nav ul {
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      padding-right: 4px;
+      transition: 1s;
+      padding: 2px 0px;
+      top: -100% ;
+}
+
+nav.black ul {
+      background: #000;
+      height:12vh;
+      margin-top: 0 ;
+      top: -100% ;
+      padding: 14px 0px;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 1px 12px !important;
+}
+
+nav ul li a{
+    position: relative;
+    display: inline-block;
+    padding:0.5px 16.0px;
+    color: #2FFF00 ;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: "consolas";
+    overflow: hidden;
+    transition:0.2s;
+
+}
+
+nav ul li a:hover{
+    color:#000000;
+    background:#2FFF00 ;
+    box-shadow: 0 0 10px #2FFF00, 0 0 40px #2FFF00, 0 0 80px #2FFF00 ;
+    transition-delay: 0.25s;  
+}
+
+nav ul li a span{
+    position: absolute;
+    display: block;
+}
+
+nav ul li a span:nth-child(1){
+    top:0;
+    left:-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(90deg,transparent,#2FFF00 );
+}
+
+nav ul li a:hover span:nth-child(1){
+    left:100%;
+    transition:0.25s;
+
+}
+
+nav ul li a span:nth-child(3){
+    bottom:0;
+    right:-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(270deg,transparent,#2FFF00 );
+}
+
+nav ul li a:hover span:nth-child(3){
+    right:100%;
+    transition:0.25s;
+    transition-delay: 0.125s;
+
+}
+
+nav ul li a span:nth-child(2){
+    top:-100%;
+    right:0;
+    width:2px;
+    height:100%;
+    background: linear-gradient(180deg,transparent,#2FFF00 );
+}
+
+nav ul li a:hover span:nth-child(2){
+    top:100%;
+    transition:0.25s;
+    transition-delay: 0.0625;
+}
+
+nav ul li a span:nth-child(4){
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background: linear-gradient(360deg,transparent,#2FFF00 );
+}
+
+nav ul li a:hover span:nth-child(4){
+    bottom:100%;
+    transition:0.25s;
+    transition-delay: 0.1875s;
+}
+
+.menu-icon {
+      line-height: 6px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+      transition: 1s ease-in;
+}
+
+.toggle{
+      position: fixed;
+      top: 41%;
+      left:85%;
+      padding: 14px;
+      
+}
+
+.toggle span{
+      position: relative;
+      width:36px;
+      height:4px;
+      transition: 0.5s;
+      display: block;
+      margin-bottom:8px;
+      background:#fff;
+}
+
+.toggle span:nth-child(1){
+      transform-origin: left;
+      
+}
+
+.toggle span:nth-child(2){
+      transform-origin: center;
+      
+ }
+
+.toggle span:nth-child(3){
+      transform-origin: left;
+            
+}
+
+.toggle.active span:nth-child(1){
+      transform:rotate(45deg);
+      left:2px;
+    background:#2FFF00;
+}
+
+.toggle.active span:nth-child(2){
+      transform:rotate(315deg);
+      right:2px;
+      background:#2FFF00;
+}
+
+.toggle.active span:nth-child(3){
+      transform:scaleX(0);
+      background:#2FFF00;
+}
+
+body {
+      font-family:"sans-serif", "Helvetica Neue";
+      font-weight: lighter;
+}
+
+header {
+      width: 100%;
+      height: 100vh;
+      background: url('../../images/2020 1.jpg') no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo1 {         
+      display: inline-block!important;
+      line-height: 60px;
+      position: fixed!important;
+      left:1% !important;
+      top:-34.5!important;
+      color: #fff!important;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+.logo2 {
+      display: inline-block!important;
+      line-height: 60px;
+      position: fixed!important;
+      left :10% !important;
+      top:-1.6% !important;      
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+.logo1 img{
+      float: inherit;
+      top:inherit;
+      width: 130px;
+      line-height: 0px;
+      padding: 0 15px;
+      height: auto;
+      z-index: 2;
+}
+.logo2 img{
+      left: inherit;
+      top:inherit;
+      width: 220px;
+      padding: 0 15px;
+      margin-top: 15px;
+      height: auto;
+      z-index: 2;
+}
+
+@media(max-width: 1386px) {
+
+      .logo1 {
+            position: fixed;
+            top: 3.3%;
+            left:4% !important;            
+            margin-top: 16px;
+            width:60px !important;
+      }
+
+      .logo2 {
+            position: fixed;
+            top: 3.3% !important;
+            left:30% !important;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+            height:auto;
+            top:0 !important;
+            margin-top: 0 !important;
+
+       }
+
+       nav ul li:nth-child(3){
+            margin-top: 26px !important;
+       }
+
+      nav.black ul {
+            background: #000;
+            height:auto;
+            top:0 !important;
+            margin-top: 0 !important;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      .toggle{
+      position:fixed !important;
+      top: 8.1% !important;
+      left:88% !important;
+      padding: 14px !important;     
+      }
+
+      nav.black .toggle{
+            height: 7vh;
+            margin: 0 !important;
+            top:1.5% !important;
+            right:-15% !important;
+            padding: 0 !important;
+      }
+
+      nav.black .toggle span{
+        background: #2FFF00;
+      }
+
+      nav.black .logo1{
+        top:-2% !important;
+        left:2% !important;
+      }
+
+      nav.black .logo2{
+        top:-5% !important;
+        left:29% !important;
+      }
+      
+      nav.black .logo1 img{
+            height: 51px;
+            width: 51px;
+      }
+
+      nav ul li{
+            list-style-image: url("bolt.png") !important;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100% !important;
+            padding: -100px;
+            text-align: center;
+      }
+
+      nav ul li a{
+            width: 100% !important;
+            font-size: 2.5vw;
+            letter-spacing: 1.2vw;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
+</style>

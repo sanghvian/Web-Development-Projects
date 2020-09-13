@@ -1,0 +1,226 @@
+@font-face{
+    font-family: Google;
+    src:url('../../../fonts/Google.ttf')
+}
+@font-face{
+    font-family: GoogleBold;
+    src:url('../../../fonts/Google\ Bold.ttf')
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Google';
+    background: #000;
+    color: #fff;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .heading{
+    font-size: 5rem;
+    font-family: 'GoogleBold';
+    letter-spacing: 0.05rem;
+    margin:0.5rem;
+}
+
+header h2{
+    font-size: 3rem;
+    letter-spacing: 0.025rem;
+    margin: 0.5rem;
+}
+
+section.middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+    background: #fff;
+    color:#000;
+    border-radius: 0.6rem;
+    padding: 2rem 0;
+}
+
+section.middle form{
+    padding-right: 1rem;
+}
+
+.new-timer{
+    margin:0.3rem;
+}
+
+.timerName input{
+    border:none;
+    outline:none;
+    width:95%;
+    height: 2.5rem;
+    padding:0.3rem 0.3rem 0.3rem 1.3rem;
+    border-bottom:2px solid #000;
+    margin:0.4rem;  
+    font-weight: bold;
+}
+
+.timer-time input{
+    border:none;
+    outline:none;
+    width:27%;
+    height: 2.5rem;
+    padding:0.3rem 0.3rem 0.3rem 1.3rem;
+    border-bottom:2px solid #000;
+    margin:0.4rem;  
+}
+
+.alarm-cont{
+    margin:0.4rem;
+    width:80%;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;    
+}
+
+.addTimer{
+    border: none;
+    outline:none;
+    background: #fff;
+    color: #000;
+    width: 50%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin:1.5rem 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    box-shadow: 5px 3px 10px rgb(160, 160, 160);
+}
+
+.addTimer i{
+    transition: 0.3s ease-in-out;
+}
+
+.addTimer:hover{
+    background: lightgray;
+}
+
+.addTimer:hover i{
+    transform: rotateZ(270deg);
+}
+
+.player-cont, form,.time-display{
+    position: relative;
+    height: 80%;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.player-cont{
+    flex:0.5;
+}
+
+.player-cont .track-outline,.player-cont .moving-outline{
+    position: absolute;
+    height: 250%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events:none;
+}
+ .track-outline{     
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+ }
+
+.play-button{
+    cursor:pointer;
+}
+
+.time-show:nth-child(1){
+    font-family: 'GoogleBold';
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.time-show:nth-child(2){
+    font-size: 3rem;
+}
+
+.timer-item{
+    margin: 2rem;
+    display:flex;
+    background: #fff;
+    color:#000;
+    width:80vw;
+    border-radius: 0.6rem;
+    height:5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trash,.check{
+    margin:0.25rem;
+    cursor: pointer;
+    border: none;
+    outline:none;
+    background: rgb(159, 159, 159);
+    color:#000;
+    height: 4.5rem;
+    width: 5rem;
+    font-size: 3rem;
+    border-radius: 0.6rem;
+}
+
+.item-name{
+    margin:1rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.item-time{
+    margin:1rem;
+    font-size: 1.5rem;
+    list-style-type: none;
+}
+
+
+@media all and (max-width:900px){
+    section.middle{
+        flex-direction:column;
+        min-height: 80vh;
+    }
+    .new-timer{
+        width: 100%;
+        text-align:center;
+    }
+    .player-cont .track-outline,.player-cont .moving-outline{
+        height:150%;
+        margin:1.5rem 0;
+    }
+    .play-button{
+        transform: translateY(38%);
+    }
+    .time-display{
+        position: relative;
+        transform: translateY(35%);
+    }
+    .trash,.check{
+        font-size:1rem ;
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+}

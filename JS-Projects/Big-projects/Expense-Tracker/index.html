@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./money-bag.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="inner-circle"></div>
+        </div>
+    </div>
+    <h3 class="ltod">Dark theme <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h3>
+    <div class="main-cont">
+        <div class="left">
+            <h1 class="left-head">Expense Tracker <i class="fa fa-credit-card" aria-hidden="true"></i></h1>
+            <div class="credit-debit part">
+                <div class="credit">
+                    <h2 class="cred-head">Credit</h2>
+                    <p class="cred-no"></p>
+                </div>
+                <div class="debit">
+                    <h2 class="deb-head">Debit</h2>
+                    <p class="deb-no"></p>
+                </div>
+            </div>
+            <script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+            <div class="finance part">
+                <h3 class="sub-heading">Statement</h3>
+                <p>Click on an element to remove it</p>
+                <!-- <div class="item income-cash/asset-cash/liability-cash" >
+                    <button class="cross-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    <div class="item-data">
+                        <p class="item-name">Expensive watch</p>
+                        <p class="item-cash">₹4000</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="add-exp part">
+                <h2 class="sub-heading">Add a new transaction</h2>
+                <form action="">
+                    <input type="text" name="exp-name" id="exp-name" placeholder='Name of transaction' required>
+                    <label for="exp-amt" class='exp-amt'><strong>Enter your Amount</strong><br>(+ve for credit & -ve for debit)</label>
+                    <input type="number" name="exp-amt" id="exp-amt" required>
+                    <div class="radio">
+                        <input type="radio" name="money-type" id="inc" value='income-cash' required>
+                        <label for="inc" id='inc'>Income</label>
+                        <input type="radio" name="money-type" id="as" value='asset-cash' required>
+                        <label for="as" id='ass'>Asset</label>
+                        <input type="radio" name="money-type" id="li" value='liability-cash' required>
+                        <label for="li" id='liab'>Liability</label>
+                    </div>
+                    <button class='submit' type="submit">Add Value<i class="fa fa-plus" aria-hidden="true"></i></input>
+                </form>
+            </div>
+            <button class="calci-score">Calculate Score<i class="fa fa-money" aria-hidden="true"></i></button>
+        </div>
+        <div class="right">
+            <h1 class="right-head">Analytics <i class="fa fa-pie-chart" aria-hidden="true"></i></h1>
+            <div class="balance part">
+                <h2 class="sub-heading">Your Balance</h2>
+                <p class='balance-no'></p>   
+                <p class="chart-clue"></p>             
+            </div>
+                <div class="chart-container" style="position: relative; height:30vh; width:80%">
+                    <canvas id="myChart1" height="300" width="400"></canvas>
+                </div>
+            <h2 class="sub-heading as-li-head">Assets and Liabilities</h2>
+            <div class="as-li">
+                <div class="assets">
+                    <h3 class="stats-head">Assets</h3>
+                    <svg width="211" height="235" viewBox="0 0 211 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Asset">
+                        <path id="arrow-asset" fill-rule="evenodd" clip-rule="evenodd" d="M104.547 1.46757C101.779 -0.489193 98.0786 -0.48919 95.3107 1.46758L14.397 58.6703C8.02575 63.1745 11.2125 73.2027 19.0152 73.2027H59.4289V164.203C59.4289 172.487 66.1446 179.203 74.4289 179.203H125.429C133.713 179.203 140.429 172.487 140.429 164.203V73.2027H180.843C188.645 73.2027 191.832 63.1745 185.461 58.6703L104.547 1.46757Z" fill="#00d0e7"/>
+                        <path class='outside coin' coins id="Ellipse 3" d="M55 112C55 118.075 50.0751 123 44 123C37.9249 123 33 118.075 33 112C33 105.925 37.9249 101 44 101C50.0751 101 55 105.925 55 112Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3" d="M47.4615 117L40.75 112C44.8923 112 47.4615 110.933 45.9231 108.435C44.9228 106.811 42.8462 107.007 39 107.007H49M39 109.143H49" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' coins id="Ellipse 3_2" d="M22 125C22 131.075 17.0751 136 11 136C4.92487 136 0 131.075 0 125C0 118.925 4.92487 114 11 114C17.0751 114 22 118.925 22 125Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3_2" d="M14.4615 130L7.75 125C11.8923 125 14.4615 123.933 12.9231 121.435C11.9228 119.811 9.84615 120.007 6 120.007H16M6 122.143H16" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' coins id="Ellipse 3_3" d="M211 125C211 131.075 206.075 136 200 136C193.925 136 189 131.075 189 125C189 118.925 193.925 114 200 114C206.075 114 211 118.925 211 125Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3_3" d="M203.462 130L196.75 125C200.892 125 203.462 123.933 201.923 121.435C200.923 119.811 198.846 120.007 195 120.007H205M195 122.143H205" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' coins id="Ellipse 3_4" d="M177 97C177 103.075 172.075 108 166 108C159.925 108 155 103.075 155 97C155 90.9249 159.925 86 166 86C172.075 86 177 90.9249 177 97Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3_4" d="M169.462 102L162.75 97C166.892 97 169.462 95.9331 167.923 93.435C166.923 91.8108 164.846 92.0075 161 92.0075H171M161 94.1429H171" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' coins id="Ellipse 3_5" d="M44 154C44 160.075 39.0751 165 33 165C26.9249 165 22 160.075 22 154C22 147.925 26.9249 143 33 143C39.0751 143 44 147.925 44 154Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3_5" d="M36.4615 159L29.75 154C33.8923 154 36.4615 152.933 34.9231 150.435C33.9228 148.811 31.8462 149.007 28 149.007H38M28 151.143H38" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' coins id="Ellipse 3_6" d="M171 130C171 136.075 166.075 141 160 141C153.925 141 149 136.075 149 130C149 123.925 153.925 119 160 119C166.075 119 171 123.925 171 130Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3_6" d="M163.462 135L156.75 130C160.892 130 163.462 128.933 161.923 126.435C160.923 124.811 158.846 125.007 155 125.007H165M155 127.143H165" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' coins id="Ellipse 3_7" d="M194 159C194 165.075 189.075 170 183 170C176.925 170 172 165.075 172 159C172 152.925 176.925 148 183 148C189.075 148 194 152.925 194 159Z" fill="#00d0e7"/>
+                        <path class='inside coin' id="Vector 3_7" d="M186.462 164L179.75 159C183.892 159 186.462 157.933 184.923 155.435C183.923 153.811 181.846 154.007 178 154.007H188M178 156.143H188" stroke="white" stroke-width="1.25"/>
+                        </g>
+                    </svg>  
+                    <div class="chart-container2" style="position:relative,height:20vh,width:40%">
+                        <canvas id="myChart2" height="300" width="200"></canvas>
+                    </div>
+                </div>
+                <div class="liabilities">
+                    <h3 class="stats-head">Liabilities</h3>
+                    <svg width="209" height="235" viewBox="0 0 209 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Liab">
+                        <path class='outside coin' id="Ellipse 3" d="M60 15C60 21.0751 55.0751 26 49 26C42.9249 26 38 21.0751 38 15C38 8.92486 42.9249 4 49 4C55.0751 4 60 8.92486 60 15Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3" d="M52.4615 20L45.75 15C49.8923 15 52.4615 13.9331 50.9231 11.435C49.9228 9.81079 47.8462 10.0075 44 10.0075H54M44 12.1429H54" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' id="Ellipse 3_2" d="M38 77C38 83.0751 33.0751 88 27 88C20.9249 88 16 83.0751 16 77C16 70.9249 20.9249 66 27 66C33.0751 66 38 70.9249 38 77Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3_2" d="M30.4615 82L23.75 77C27.8923 77 30.4615 75.9331 28.9231 73.435C27.9228 71.8108 25.8462 72.0075 22 72.0075H32M22 74.1429H32" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' id="Ellipse 3_3" d="M22 37C22 43.0751 17.0751 48 11 48C4.92487 48 0 43.0751 0 37C0 30.9249 4.92487 26 11 26C17.0751 26 22 30.9249 22 37Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3_3" d="M14.4615 42L7.75 37C11.8923 37 14.4615 35.9331 12.9231 33.435C11.9228 31.8108 9.84615 32.0075 6 32.0075H16M6 34.1429H16" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' id="Ellipse 3_4" d="M60 47C60 53.0751 55.0751 58 49 58C42.9249 58 38 53.0751 38 47C38 40.9249 42.9249 36 49 36C55.0751 36 60 40.9249 60 47Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3_4" d="M52.4615 52L45.75 47C49.8923 47 52.4615 45.9331 50.9231 43.435C49.9228 41.8108 47.8462 42.0075 44 42.0075H54M44 44.1429H54" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' id="Ellipse 3_5" d="M181 20C181 26.0751 176.075 31 170 31C163.925 31 159 26.0751 159 20C159 13.9249 163.925 9 170 9C176.075 9 181 13.9249 181 20Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3_5" d="M173.462 25L166.75 20C170.892 20 173.462 18.9331 171.923 16.435C170.923 14.8108 168.846 15.0075 165 15.0075H175M165 17.1429H175" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' id="Ellipse 3_6" d="M209 51C209 57.0751 204.075 62 198 62C191.925 62 187 57.0751 187 51C187 44.9249 191.925 40 198 40C204.075 40 209 44.9249 209 51Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3_6" d="M201.462 56L194.75 51C198.892 51 201.462 49.9331 199.923 47.435C198.923 45.8108 196.846 46.0075 193 46.0075H203M193 48.1429H203" stroke="white" stroke-width="1.25"/>
+                        <path class='outside coin' id="Ellipse 3_7" d="M176 78C176 84.0751 171.075 89 165 89C158.925 89 154 84.0751 154 78C154 71.9249 158.925 67 165 67C171.075 67 176 71.9249 176 78Z" fill="#D64242"/>
+                        <path class='inside coin' id="Vector 3_7" d="M168.462 83L161.75 78C165.892 78 168.462 76.9331 166.923 74.435C165.923 72.8108 163.846 73.0075 160 73.0075H170M160 75.1429H170" stroke="white" stroke-width="1.25"/>
+                        <path id="arrow-liab" fill-rule="evenodd" clip-rule="evenodd" d="M101.311 177.735C104.079 179.692 107.779 179.692 110.547 177.735L191.461 120.532C197.832 116.028 194.645 106 186.843 106L146.429 106L146.429 15C146.429 6.71575 139.713 5.65163e-06 131.429 6.37587e-06L80.4289 1.08344e-05C72.1446 1.15587e-05 65.4289 6.71574 65.4289 15L65.4289 106L25.0152 106C17.2126 106 14.0258 116.028 20.397 120.532L101.311 177.735Z" fill="#D64242"/>
+                        </g>
+                        </svg>
+                        <div class="chart-container2" style="position:relative,height:20vh, width:80%">
+                            <canvas id="myChart3" height="300" width="200"></canvas>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ftr">
+        <p>An asset is anything that puts money in your pocket. A liability is anything that takes money out of your pocket.</p>
+        <p>~ Robert Kiyosaki</p>
+        <h3>Developed by Ankit</h3>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

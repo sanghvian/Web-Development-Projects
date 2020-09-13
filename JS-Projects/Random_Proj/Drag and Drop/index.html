@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop</title>
+</head>
+<body>
+    <h1>The Drag N Drop Bar</h1>
+    <div class="simple-drag-container">
+        <div class="empty">
+            <div class="fill" draggable='true'></div>
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+    </div>
+    <div class="sort-drag-container">
+        <div class="container">
+        <div draggable='true' class="draggable">1</div>
+        <div class="draggable" draggable='true'>2</div>
+        </div>
+        <div class="container">
+        <div draggable='true' class="draggable">3</div>
+        <div class="draggable" draggable='true'>4</div>
+        </div>
+        <div class="container">
+        <div draggable='true' class="draggable">5</div>
+        <div class="draggable" draggable='true'>6</div>
+        </div>
+        <div class="container">
+        <div draggable='true' class="draggable">7</div>
+        <div class="draggable" draggable='true'>8</div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

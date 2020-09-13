@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Timer GRE</title>
+    <link rel="icon" href="./p.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="heading">Pratik's GRE Timer</h1>
+        <h2>All the best bro ! I believe in you</h2>
+    </header>
+
+    <section class="middle">
+        <form>
+            <div class="enter-data">
+                <h2 class="new-timer">Add new timer</h2>
+                <div class="timerName">
+                    <input type="text" name='timer-name' id="timer-name" placeholder="Timer Name" required>
+                </div>
+                <div class="timer-time">
+                    <input type="number" data-hr=''  name='timer-time-hr' id="timer-time-hr" step=1 placeholder="Hours" min='0' required>
+                    <input type="number" data-min='' name='timer-time-min' id="timer-time-min" min='0' max='60' step=1 placeholder="Minutes" required>
+                    <input type="number" data-sec='' name='timer-time-sec' id="timer-time-sec" min='0' max='60' step=1 placeholder="Seconds" required>
+                </div>
+            </div>
+            <div class="alarm-cont">                
+                    <input type="radio" name='alarm-type' value='onebeep' id=onebeep data-sound='./onebeep.mp3'required> 
+                    <label for="onebeep">1 Beep</label>          
+                                
+                    <input type="radio" name='alarm-type' value='twobeep' id=twobeep data-sound='./twobeep.mp3'required>
+                    <label for="twobeep">2 Beeps</label>
+                                
+                    <input type="radio" name='alarm-type' value='sevenbeep' id=sevenbeep data-sound='./morebeep.mp3'required>
+                    <label for="sevenbeep">7 Beeps</label>
+                
+            </div>
+            <button class='addTimer'><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
+        </form>
+
+        <div class="player-cont">
+            <audio src="beep.mp3" class="song"></audio>  
+            <!-- <svg class ='play-btn' width="128" height="148" viewBox="0 0 128 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M128 74L0.499993 147.612L0.5 0.387835L128 74Z" fill="white"/>
+            </svg>           -->
+            <svg class='play-button' width="56" height="66" viewBox="0 0 56 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M56 33L0.499997 65.0429L0.5 0.957059L56 33Z" fill="black"/>
+            </svg>
+            <svg class='track-outline' width="324" height="330" viewBox="0 0 324 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M162 330C251.47 330 324 256.127 324 165C324 73.873 251.47 0 162 0C72.5298 0 0 73.873 0 165C0 256.127 72.5298 330 162 330ZM162 312C243.186 312 309 246.186 309 165C309 83.8141 243.186 18 162 18C80.8141 18 15 83.8141 15 165C15 246.186 80.8141 312 162 312Z" fill="black"/>
+            </svg>
+            <svg class='moving-outline' width="324" height="330" viewBox="0 0 324 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M162 330C251.47 330 324 256.127 324 165C324 73.873 251.47 0 162 0C72.5298 0 0 73.873 0 165C0 256.127 72.5298 330 162 330ZM162 312C243.186 312 309 246.186 309 165C309 83.8141 243.186 18 162 18C80.8141 18 15 83.8141 15 165C15 246.186 80.8141 312 162 312Z" fill="#414141"/>
+            </svg>
+        </div>
+
+        <div class="time-display">
+            <p class="time-show">Time Remaining</p>
+            <p class="time-show">00:00:00</p>
+        </div>
+        
+    </section>
+    <div class="timers-cont"><ul class="timer-list"></ul></div>
+    <!-- Basic Outline of 1 timer list item
+    <ul class="timer-list">
+        <div class="timer-item">
+            <li class="item-name"></li>
+            <li class="item-time"></li>
+            <button class="trashBtn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </div>
+    </ul> -->
+    <script src="app.js"></script>
+</body>
+</html>

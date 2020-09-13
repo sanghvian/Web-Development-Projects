@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+header{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+header h2{
+    font-size: 3rem;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 0.6rem;
+    text-decoration:none;
+    background: #000;
+}
+
+header h2 a{
+    color:#fff;
+    text-decoration:none;
+}
+
+form{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+form input{
+    border:solid black 0.3rem;
+    outline:none;
+    padding:0.4rem;
+    font-size: 1.5rem;
+}
+
+form button{
+    width: 3.1rem;
+    height: 3.1rem;
+    border:none;
+    outline:none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    background: #000;
+    border-top-right-radius:0.6rem;
+    border-bottom-right-radius:0.6rem ;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-btn{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2rem;
+    border:none;
+    outline: none;
+    width:4.1rem;
+    height: 3.1rem;
+    color:#fff;
+    font-size: 2rem;
+    background: #000;
+    border-radius: 0.6rem;
+    padding:0.8rem 0.3rem;
+    cursor:pointer;
+}
+
+.gallery{
+    display: grid;
+    padding:2rem 0rem;
+    row-gap:5rem;
+    column-gap:3rem;
+    width:80%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+}
+
+.gallery-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem;
+}
+.gallery-info a{    
+    color:gray;
+    text-decoration: none;
+}
+
+.gallery-info .photographer{
+    font-weight: bold;
+}
+
+.gallery-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ftr{
+    background: #000;
+    color: #FFF;
+    bottom: 0;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+@media all and (max-width:700px){
+    .gallery-info{
+        flex-direction: column;
+        align-items: start;
+    }
+    .gallery{
+        position: relative;
+        left:-10%;
+    }
+}

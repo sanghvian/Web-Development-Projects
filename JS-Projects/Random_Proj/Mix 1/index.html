@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix 1</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <h2 class="logo">WebDev</h2>
+        <ul>
+            <li data-active='dr-do'>Drag/Drop</li>
+            <li data-active='voice-recog'>Voice recog</li>
+            <li data-active='anim'>Anim</li>
+            <li data-active='infinite-blog'>&#8734; blog</li>
+            <div class="bubble"></div>
+        </ul>
+    </nav>
+    <section class="dr-do" data-index='0'>
+        <h1 class='section-title'>The Drag Bar</h1>
+        <div class="simple-drag-container">
+            <div class="empty">
+                <div class="fill" draggable='true'></div>
+            </div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="sort-drag-container">
+            <div class="container">
+            <div draggable='true' class="draggable">1</div>
+            <div class="draggable" draggable='true'>2</div>
+            </div>
+            <div class="container">
+            <div draggable='true' class="draggable">3</div>
+            <div class="draggable" draggable='true'>4</div>
+            </div>
+            <div class="container">
+            <div draggable='true' class="draggable">5</div>
+            <div class="draggable" draggable='true'>6</div>
+            </div>
+            <div class="container">
+            <div draggable='true' class="draggable">7</div>
+            <div class="draggable" draggable='true'>8</div>
+            </div>
+        </div>
+    </section>
+    <section class="voice-recog" data-index='1'>Speech to text</section>
+    <section class="anim" data-index='2'>
+        <h1 class="section-title blah">Some new CSS</h1>
+            <ul class="edu">
+                <li>
+                    <i class="fas fa-school"></i>
+                    <h3 class="board">ICSE 10th Std</h3>
+                    <p class="grade">93.8%</p>
+                    <p class="school">Activity High School, Mumbai</p>
+                    <p class="school">2003-2017</p>
+                </li>
+                <li>
+                    <i class="fas fa-university"></i>
+                    <h3 class="board">HSC 12th Std</h3>
+                    <p class="grade">89.8%</p>
+                    <p class="school">Pace Junior Science College</p>
+                    <p class="school">2017-2019</p>
+                </li>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 class="board">BTech in Civil Engineering</h3>
+                    <p class="grade">CGPA : 8.65</p>
+                    <p class="school">IIT Madras</p>
+                    <p class="school">2019-present</p>
+                </li>
+            </ul>
+            <div class="counter-cont">
+                <div class="counter-box">
+                    <i class="fab fa-youtube"></i>
+                    <h3>YouTube</h3>
+                    <p class='counter' data-target='10000'>0</p>
+                </div>
+                <div class="counter-box">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIN</h3>
+                    <p class='counter' data-target='5440'>0</p>
+                </div>
+                <div class="counter-box">
+                    <i class="fab fa-dribbble-square"></i>
+                    <h3>Dribbble</h3>
+                    <p class='counter' data-target='9881'>0</p>
+                </div>
+                <div class="counter-box">
+                    <i class="fab fa-amazon"></i>
+                    <h3>Amazon</h3>
+                    <p class='counter' data-target='2134980'>0</p>
+                </div>
+            </div>
+    </section>
+    <section class="infinite-blog" data-index='3'>
+        <h1 class="section-title">INFINITE BLOG</h1>
+            <div class="filter">
+                <input type="text" id='filter-inp' class='filter-inp' placeholder = 'Filter names....'>
+            </div> 
+            <div class="posts-container"></div>
+            <div class="loader">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+    </section>
+    <script src="https://kit.fontawesome.com/484c1aba27.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

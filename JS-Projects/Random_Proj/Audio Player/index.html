@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="icon" href="./images/boom.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 class="head">Music Player</h1>
+    <div class="music-container">
+        <div class="music-info">
+            <h4 class="music-title"></h4>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <audio src="./music/heavy.mp3"></audio>
+
+        <div class="img-container">
+            <img class='cover' src="./images/heavy.jpeg" alt="">
+        </div>
+
+        <div class="navigations">
+            <button class="bcwd"><i class="fa fa-backward" aria-hidden="true"></i></button>
+            <button class="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button class="frwd"><i class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div class="ftr">
+        <h1>Developed by Ankit</h1>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

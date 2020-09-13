@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Guessing Game</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function guessGame(){
+      let randomNr = Math.floor(Math.random() * 11);
+      console.log(randomNr);
+    let guess;
+    do{
+        guess = prompt("Guess a number between 1-10");
+        console.log(guess,randomNr);
+
+        if(randomNr>guess){
+          console.log("You guessed too low. Guess again");
+        }
+        else if(randomNr<guess){
+        console.log("You guessed too high. Guess again");
+        }
+      }while(guess!=randomNr)
+    console.log("Congrats. You beat the game");
+    }
+    guessGame();
+    
+  </script>
+</body>
+</html>
