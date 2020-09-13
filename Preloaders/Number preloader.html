@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Number Preloader</title>
+</head>
+<body>
+	<div class="preloader">
+		<div class ="counter">0</div>
+	</div>
+	<section>
+		<h2>Stay Hungry. Stay Foolish.<span>Steve Jobs</span></h2>
+		<p>I am honored to be with you today at your commencement from one of the finest universities in the world. I never graduated from college. Truth be told, this is the closest I’ve ever gotten to a college graduation. Today I want to tell you three stories from my life. That’s it. No big deal. Just three stories.
+		<br>
+		The first story is about connecting the dots.
+		<br>
+		I dropped out of Reed College after the first 6 months, but then stayed around as a drop-in for another 18 months or so before I really quit. So why did I drop out?
+		<br>
+		It started before I was born. My biological mother was a young, unwed college graduate student, and she decided to put me up for adoption. She felt very strongly that I should be adopted by college graduates, so everything was all set for me to be adopted at birth by a lawyer and his wife. Except that when I popped out they decided at the last minute that they really wanted a girl. So my parents, who were on a waiting list, got a call in the middle of the night asking: “We have an unexpected baby boy; do you want him?” They said: “Of course.” My biological mother later found out that my mother had never graduated from college and that my father had never graduated from high school. She refused to sign the final adoption papers. She only relented a few months later when my parents promised that I would someday go to college.
+		<br>
+		And 17 years later I did go to college. But I naively chose a college that was almost as expensive as Stanford, and all of my working-class parents’ savings were being spent on my college tuition. After six months, I couldn’t see the value in it. I had no idea what I wanted to do with my life and no idea how college was going to help me figure it out. And here I was spending all of the money my parents had saved their entire life. So I decided to drop out and trust that it would all work out OK. It was pretty scary at the time, but looking back it was one of the best decisions I ever made. The minute I dropped out I could stop taking the required classes that didn’t interest me, and begin dropping in on the ones that looked interesting.
+		<br>
+		It wasn’t all romantic. I didn’t have a dorm room, so I slept on the floor in friends’ rooms, I returned Coke bottles for the 5¢ deposits to buy food with, and I would walk the 7 miles across town every Sunday night to get one good meal a week at the Hare Krishna temple. I loved it. And much of what I stumbled into by following my curiosity and intuition turned out to be priceless later on. Let me give you one example:
+		<br>
+		Reed College at that time offered perhaps the best calligraphy instruction in the country. Throughout the campus every poster, every label on every drawer, was beautifully hand calligraphed. Because I had dropped out and didn’t have to take the normal classes, I decided to take a calligraphy class to learn how to do this. I learned about serif and sans serif typefaces, about varying the amount of space between different letter combinations, about what makes great typography great. It was beautiful, historical, artistically subtle in a way that science can’t capture, and I found it fascinating.
+		<br>
+		None of this had even a hope of any practical application in my life. But 10 years later, when we were designing the first Macintosh computer, it all came back to me. And we designed it all into the Mac. It was the first computer with beautiful typography. If I had never dropped in on that single course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts. And since Windows just copied the Mac, it’s likely that no personal computer would have them. If I had never dropped out, I would have never dropped in on this calligraphy class, and personal computers might not have the wonderful typography that they do. Of course it was impossible to connect the dots looking forward when I was in college. But it was very, very clear looking backward 10 years later.
+		<br>
+		Again, you can’t connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.</p>
+	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+		function counter(){
+			var count = setInterval(function(){
+				var c = parseInt($('.counter').text());
+				$('.counter').text((++c).toString());
+				if(c==100){
+					clearInterval(count);
+					$('.counter').addClass('hide')
+					$('.preloader').addClass('active')
+
+				}
+			},30)
+		}
+		counter()
+	</script>
+</body>
+</html>
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Audiowide&family=Chakra+Petch:wght@700&family=Kumar+One&family=Press+Start+2P&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	section{
+		padding: 100px;
+	}
+
+	section h2{
+		font-size: 4em;
+		color: #4b656d;
+		font-family: Russo One;
+	}
+
+	section h2 span{
+		display: block;
+		font-size: 0.5em;
+		color:#ff4983;
+		font-family: Russo One;
+	}
+
+	section p{
+		margin-top: 20px;
+		font-size: 1.2em;
+		font-family: Roboto;
+	}
+
+	.preloader{
+		position: fixed;
+		top:0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width:100%;
+		height:100vh;
+		background: #070707;
+		z-index: 100000000;
+		font-family: Audiowide;
+	}
+
+	.preloader:before{
+		content: 'Loading';
+		position: absolute;
+		font-size: 12em;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: rgba(255,255,255,0.03);
+	}
+
+	.preloader.active{
+		transform: translateY(-100vh);
+		transition: ease-in-out 2s;
+		transition-delay: 1s;
+	}
+
+	.counter{
+		position: relative;
+		color:#fff;
+		font-size: 16em;
+		font-weight: 700;
+		z-index:1;
+		transform: translateY(40%);
+	}
+
+	.counter:after{
+		content: '%';
+		font-size: 0.5em;
+	}
+	.hide{
+		opacity: 0;
+		transition: 1s;
+		pointer-events: none;
+	}
+
+</style>

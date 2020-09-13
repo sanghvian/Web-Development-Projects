@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    /* Get rid of default cursor */
+    cursor:none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    min-height: 10vh;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-links, h1{
+    flex:1;
+}
+
+.nav-links li{
+    padding: 1.5rem;
+}
+
+.cursor{
+    width: 2rem;
+    height: 2rem;
+    border:2px solid rgb(0,0, 0);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: -1;
+    transition: 0.3s all ease;
+    /* To prevent any other transitions (eg:lag between you moving mouse and mouse moving) don't happen */
+    transition-property: background,transform; 
+    /* To make cursor scale only when it is perfectly on top(in mid) of link */
+    transform-origin: 100% 100%;
+    backdrop-filter: grayscale();
+}
+
+.link-grow{
+    transform: scale(2);
+    background: #000;
+}
+.link-only-grow{
+    transform: scale(3);
+}
+
+.hovered-link{
+    color:#fff;
+}
+
+.front-cover img{
+    position: relative;
+    z-index: -3;
+}
+
+section{
+    display: flex;
+    margin:1.3rem;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section .front-desc{
+    margin:1.4rem;
+    text-align: center;
+    border: 0.5rem solid black;
+    border-radius: 2rem;
+    padding: 2rem 9rem;
+}
+
+.imgGrid{
+    margin:1.3rem;
+    width: 90%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+}
+
+.imgGrid img{
+    width: 100%;
+    /* height:80%; */
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.imgGrid img:hover{
+    filter: grayscale(0%);
+}
+@media all and (max-width:1000px){
+    section{
+        flex-direction:column;
+    }
+}

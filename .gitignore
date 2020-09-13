@@ -1,0 +1,11 @@
+/.vscode
+/WebOps
+/Django-projects
+/MERN-projects
+/Node-Projects
+/Electron-Projects
+/React-Projects
+/JS-Projects
+
+# Local Netlify folder
+.netlify
