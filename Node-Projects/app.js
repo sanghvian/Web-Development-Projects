@@ -7,6 +7,7 @@ const home = require('./routes/home');
 const morgan = require('morgan');
 const config = require('config');
 const Joi = require('joi');
+const debug = require('debug')('app:startup');
 
 //USING MIDDLEWARE FUNCTIONS
 app.set('view engine', 'pug');
@@ -21,14 +22,14 @@ app.use('/', home);
 app.use(express.json());
 
 //  CONFIGURING APP AS PER ENVIRONMENT AND HANDLING SECRETS
-app.get('Application Name : ' + config.get('name'));
-app.get('Mail Server Name : ' + config.get('mail.host'));
-app.get('App Password : ' + config.get('password'));
+console.log('Application Name : ' + config.get('name'));
+console.log('Mail Server Name : ' + config.get('mail.host'));
+console.log('Mail Password : ' + config.get('mail.password'));
 
 //LOGGING REQUESTS ONLY IN DEVELOPMENT ENVIRONMENT
 if (app.get('env') === 'development') {
   app.use(morgan('tiny'));
-  // debug('Morgan is running')
+  debug('Morgan is running');
   console.log('Morgan is logging requests...');
 }
 

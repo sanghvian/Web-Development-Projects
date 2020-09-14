@@ -11,6 +11,10 @@ genres = [
   { id: 6, genre: 'biopic' },
 ];
 
+router.get('/', (req, res) => {
+  res.send(genres);
+});
+
 //GET METHOD
 router.get('/:id', (req, res) => {
   const genre = reqValidate(req);
@@ -19,15 +23,14 @@ router.get('/:id', (req, res) => {
 
 //POST METHOD
 router.post('/', (req, res) => {
-  genre = {
-    id: genres.length + 1,
-    name: req.body.name,
-  };
-
   const { error } = inputValidate(req.body);
   if (error) {
     return res.status(400).send(error.details[0].message);
   }
+  const genre = {
+    id: genres.length + 1,
+    name: req.body.name,
+  };
   genres.push(genre);
   res.send(genre);
 });
