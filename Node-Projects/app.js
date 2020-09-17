@@ -1,19 +1,40 @@
 const express = require('express');
 const app = express();
-const logger = require('./middleware/logger');
-const courses = require('./routes/courses');
+const mongoose = require('mongoose');
+// const logger = require('./middleware/logger');
+const genres = require('./routes/genres');
 const helmet = require('helmet');
 const home = require('./routes/home');
 const morgan = require('morgan');
 const config = require('config');
-const Joi = require('joi');
 const debug = require('debug')('app:startup');
+const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
+
+//DEFINING THE ROUTES
+const customers = require('./routes/customers');
+const movies = require('./routes/movies');
+const rentals = require('./routes/rentals');
+
+//CONNECTING TO mongoDB
+mongoose
+  .connect('mongodb://localhost/vidly', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('Mongo DB connected...'))
+  .catch((err) => console.log(err.message));
 
 //USING MIDDLEWARE FUNCTIONS
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-app.use('/api/courses', courses);
+//SETTING UP ROUTES FOR DIFFERENT STUFF
+app.use('/api/rentals', rentals);
+app.use('/api/customers', customers);
+app.use('/api/movies', movies);
+app.use('/api/genres', genres);
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(helmet());
@@ -24,7 +45,7 @@ app.use(express.json());
 //  CONFIGURING APP AS PER ENVIRONMENT AND HANDLING SECRETS
 console.log('Application Name : ' + config.get('name'));
 console.log('Mail Server Name : ' + config.get('mail.host'));
-console.log('Mail Password : ' + config.get('mail.password'));
+// console.log('Mail Password : ' + config.get('mail.password'));
 
 //LOGGING REQUESTS ONLY IN DEVELOPMENT ENVIRONMENT
 if (app.get('env') === 'development') {
