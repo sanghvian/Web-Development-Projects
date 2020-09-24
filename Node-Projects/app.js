@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-// const logger = require('./middleware/logger');
 const genres = require('./routes/genres');
 const helmet = require('helmet');
 const home = require('./routes/home');
@@ -15,6 +14,9 @@ Joi.objectId = require('joi-objectid')(Joi);
 const customers = require('./routes/customers');
 const movies = require('./routes/movies');
 const rentals = require('./routes/rentals');
+const users = require('./routes/users');
+const auth = require('./routes/auth');
+const authrz = require('./middleware/authrz');
 
 //CONNECTING TO mongoDB
 mongoose
@@ -34,6 +36,8 @@ app.use('/api/rentals', rentals);
 app.use('/api/customers', customers);
 app.use('/api/movies', movies);
 app.use('/api/genres', genres);
+app.use('/api/users', users);
+app.use('/api/auth', auth);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -46,6 +50,9 @@ app.use(express.json());
 console.log('Application Name : ' + config.get('name'));
 console.log('Mail Server Name : ' + config.get('mail.host'));
 // console.log('Mail Password : ' + config.get('mail.password'));
+// if (!config.get('vidly_jwtPrivateKey')) {
+//   console.error('FATAL ERROR : jwtPrivateKey is not defined '), process.exit(1);
+// }
 
 //LOGGING REQUESTS ONLY IN DEVELOPMENT ENVIRONMENT
 if (app.get('env') === 'development') {
