@@ -737,14 +737,17 @@ body.hide {
 }
 
 .pimg1 {
-  background-image: url('../images/prog3.png');
+  background-image: url('../images/127-0-0-1.jpg');
 }
 .pimg1-2 {
-  background-image: url('../images/frameworks.png');
+  background-image: url('../images/prog3.png');
 }
 
-.pimg2 {
-  background-image: url('../images/py.png');
+.pimg1-3 {
+  background-image: url('../images/frameworks.png');
+}
+.pimg1-4 {
+  background-image: url('../images/tools-for-dev.jpg');
 }
 
 .pimg3 {
@@ -759,17 +762,12 @@ body.hide {
   background-image: url('../images/office.png');
 }
 
-.pimg6 {
-  background-image: url('../images/git.jpg');
-}
-
 .pimg7 {
   background-image: url('../images/photographer.jpeg');
 }
 .pimg8 {
   background-image: url('../images/proj.jpg');
 }
-
 .pimg {
   min-height: 540px;
   opacity: 0.7;
