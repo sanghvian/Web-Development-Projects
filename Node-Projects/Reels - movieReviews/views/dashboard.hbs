@@ -1,0 +1,41 @@
+<h1>Dashboard</h1>
+<h3>Welcome {{name}} {{lastName}} ! </h3>
+<h5>Here are your movie reviews</h5>
+{{#if reviews}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each reviews}}
+        <tr>
+            <td><a href="/reviews/{{_id}}">{{title}}</a> </td>
+            <td>{{formatDate created_at 'MMMM Do YYYY h:mm:ss'}}</td>
+            <td><span class="dash-status"> {{status}} </span> </td>
+            <td>
+                <a href="/reviews/edit/{{_id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+
+                <form method="POST" action="/reviews/{{_id}}" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn red" type="submit">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You have not given any reviews. Get started by clicking the <strong>'+'</strong> button in bottom right corner to
+    start writing your
+    first
+    movie, documentary, TV Show, novels, blogs and other forms of reviews.</p>
+{{/if}}

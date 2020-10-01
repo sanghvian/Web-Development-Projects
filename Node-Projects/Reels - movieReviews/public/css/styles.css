@@ -1,0 +1,21 @@
+.login-container {
+  width: 400px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+p {
+  margin: 0 10px !important;
+}
+.fa-smallie {
+  font-size: 16px !important;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-small {
+  width: 180px;
+}
