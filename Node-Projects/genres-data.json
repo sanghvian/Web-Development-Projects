@@ -1,0 +1,20 @@
+[
+  { "name": "horror" },
+  { "name": "mystery" },
+  { "name": "suspense" },
+  { "name": "thriller" },
+  { "name": "fantasy" },
+  { "name": "documentory" },
+  { "name": "animated" },
+  { "name": "sciFi" },
+  { "name": "reflective" },
+  { "name": "comedy" },
+  { "name": "dark-comedy" },
+  { "name": "adventure" },
+  { "name": "teen" },
+  { "name": "superhero" },
+  { "name": "romance-comedy" },
+  { "name": "romance" },
+  { "name": "soulful" },
+  { "name": "action-comedy" }
+]
