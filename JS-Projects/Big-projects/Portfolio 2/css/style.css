@@ -743,34 +743,31 @@ body {
 .pimg1 {
   background-image: url('../images/127.jpg');
 }
-.pimg1-2 {
+.pimg2 {
   background-image: url('../images/prog3.png');
 }
 
-.pimg1-3 {
+.pimg3 {
   background-image: url('../images/frameworks.png');
 }
-.pimg1-4 {
+.pimg4 {
   background-image: url('../images/tools-for-dev.jpg');
 }
-
-.pimg3 {
+.pimg5 {
+  background-image: url('../images/dbms.png');
+}
+.pimg6 {
+  background-image: url('../images/cloud.jpg');
+}
+.pimg7 {
+  background-image: url('../images/office.png');
+}
+.pimg8 {
   background-image: url('../images/ansys.jpg');
 }
 
-.pimg4 {
-  background-image: url('../images/adobecc.jpg');
-}
-
-.pimg5 {
-  background-image: url('../images/office.png');
-}
-
-.pimg7 {
+.pimg9 {
   background-image: url('../images/photographer.jpeg');
-}
-.pimg8 {
-  background-image: url('../images/proj.jpg');
 }
 
 .pimg {
